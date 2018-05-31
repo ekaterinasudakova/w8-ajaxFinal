@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title> twitter ajax</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="dist/css/main.css">
+
+		<style type="text/css">
+			.highlight { color: blue;}
+		</style>
+
+	</head>
+	<body>
+
+		<div>
+			<form name="timeline">
+				Twitter handle: 
+				<input name="screen_name" type="text" id="handle"/>
+				<button type="submit" id="btn1">Get Timeline</button>
+				<div class="results">
+					<ul></ul>
+				</div>
+			</form>
+		</div>
+
+		<hr/>
+
+		<div>
+			<form name="search">
+				Query: 
+				<input name="q" type="text" id="query" />
+				<button type="submit" id="btn2">Quick Search</button>
+				<div class="results">
+					<ul></ul>
+				</div>
+			</form>
+		</div>
+
+		<hr/>
+
+
+		<script src="dist/js/main.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	</body>
+		<script type="text/javascript"></script>
