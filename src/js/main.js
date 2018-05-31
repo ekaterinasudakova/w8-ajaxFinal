@@ -16,16 +16,23 @@ var TwitterApi = (function(options) {
 
 	function setupListeners() {
 		console.log('setupListeners()');
-		btn.addEventListener('click', search());
-		btn2.addEventListener('click', search_timeline());
+        btn.addEventListener('click', function(e){
+            e.preventDefault();
+            search(e);
+        });
+
+        btn2.addEventListener('click', function(e){
+            e.preventDefault();
+            search_timeline(e);
+        });
+        
 	}
 
 	function processTheData (tweetArray, resultUl){
 		
 	}
 
-	function search (evt){
-        evt.preventDefault();
+	function search (e){
         
         axios.get(‘twitter-proxy.php’, {
             ‘op’:‘search_tweets’,
@@ -38,7 +45,7 @@ var TwitterApi = (function(options) {
 
 	}
 
-	function search_timeline(evt){
+	function search_timeline(e){
         evt.preventDefault();
     }
 
