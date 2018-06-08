@@ -15,21 +15,21 @@ var TwitterApi = (function(options) {
 	var shared = {};
 	// var options = options || {};
 
-	function setupListeners() {
-		console.log('setupListeners()');
-        btn.addEventListener('click', function(e){
-            e.preventDefault();
-            const handleTerm = handleEl.value;
-            search_timeline(handleTerm);
-        });
+	// function setupListeners() {
+	// 	console.log('setupListeners()');
+    //     btn.addEventListener('click', function(e){
+    //         e.preventDefault();
+    //         const handleTerm = handleEl.value;
+    //         search_timeline(handleTerm);
+    //     });
 
-        btn2.addEventListener('click', function(e){
-            e.preventDefault();
-            const queryTerm = queryEl.value;
-            search(queryTerm);
-        });
+    //     btn2.addEventListener('click', function(e){
+    //         e.preventDefault();
+    //         const queryTerm = queryEl.value;
+    //         search(queryTerm);
+    //     });
         
-    }
+    // }
     
     function displayData(tweet){
 
@@ -93,21 +93,23 @@ var TwitterApi = (function(options) {
             processTheData(response.data.statuses, resultsUl);
         })
 
-	}
-
-	function search_timeline(handleTerm){
-       
-        axios.get('twitter-proxy.php', {
-            params: {
-              'op': 'user_timeline',
-              'screen_name': handleTerm
-            }
-          }).then(function(response){
-            console.log(`searching timelines response: `, response);
-            processTheData(response.data, resultsUl);
-        })
-
     }
+    
+    shared.search = search;
+
+	// function search_timeline(handleTerm){
+       
+    //     axios.get('twitter-proxy.php', {
+    //         params: {
+    //           'op': 'user_timeline',
+    //           'screen_name': handleTerm
+    //         }
+    //       }).then(function(response){
+    //         console.log(`searching timelines response: `, response);
+    //         processTheData(response.data, resultsUl);
+    //     })
+
+    // }
 
 	//our entry point to make everything work
 	var init = function() {

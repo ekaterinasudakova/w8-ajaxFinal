@@ -15,8 +15,49 @@
 
 	</head>
 	<body>
+		<div class="header">
+			<h1>Ehhhh - Sketch</h1>
+			<h2>Validate your choice, see what everyone is saying about where you choose to do business</h2>
+		</div>
+		<div class="form">
+				<form>
+						<label class="label ">Business Type:
+							<input type="text" name="term" id="term" placeholder="type" value="cats" />
+						</label>
+						<label class="label">Business Location:
+							<input type="text" name="location" id="location" placeholder="location" value="Atlanta, GA" />
+						</label>
+					
+						<br/>
+					
+						<label class="label">Price Level:
+							<label>
+								<input type="checkbox" name="price" value="1" />
+							</label> $
+							<label>
+								<input type="checkbox" name="price" value="2"; />
+							</label> $$
+							<label>
+								<input type="checkbox" name="price" value="3"; />
+							</label> $$$
+							<label>
+								<input type="checkbox" name="price" value="4"; />
+							</label> $$$$
+						</label>
+					
+						<br/>
+						<button id="search">Search</button>
+						</form>
+		</div>
+		
+		
+			<hr/>
+			<div class="results-container">
+				<ul id="results"></ul>
+			</div>
+			
 
-		<div>
+		<!-- <div>
 			<form name="timeline">
 				Twitter handle: 
 				<input name="screen_name" type="text" id="handle"/>
@@ -40,10 +81,11 @@
 			</form>
 		</div>
 
-		<hr/>
+		<hr/> -->
 
 
 		<script src="dist/js/main.js"></script>
+		<script src="dist/js/yelpModule.js"></script>
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	</body>
 		<script type="text/javascript"></script>

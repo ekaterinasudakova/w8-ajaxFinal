@@ -23,82 +23,100 @@ TABLE OF CONTENTS:
 	box-sizing: border-box;
 }
 
-body {
-	background: #ccc;
-	
+body{
+	background: rgb(180, 216, 112);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	margin: 0 auto;
+	max-width: 90%;
 }
 
 
 
 
 /* 2. Content ================================= */
+h1{
+	font-size: 5em;
+	letter-spacing: .15em;
+	text-transform: lowercase;
+	margin-top: 1em;
+	margin-bottom: .5em;
+}
+h2{
+	font-size: 1.4em;
+	margin-bottom: 1em;
+}
+.form{
+	background-color: rgb(115, 185, 405);
+	border-radius: 2em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	padding: 2em 4em;
 
-.content {
-	position: relative;
-	font-family: sans-serif;
-	width: 90%;
-	max-width: 500px;
-	margin: 140px auto;
-	padding: 30px 20px 30px 30px;
-	.foreground {
-		position: relative;
-		z-index: 2;
-		transform: translateZ(100px);
+	input{
+		margin: 2em 0;
+		padding: 1em 11em;
 	}
-	.background {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		left: 0;
-		top: 0;
-		background: white;
-		z-index: 1;
-		// perspective: 2000px;
-		transition: 0.2s;
-		transform: translateX(20px) perspective(600px) rotateY(15deg);
+	button{
+		font-size: 1em;
+		text-transform: uppercase;
+		letter-spacing: .5em;
+		margin-top: 3em;
+		padding: 1em 12em;
+		background-color: antiquewhite;
 	}
-	&:hover .background {
-		transform: translateX(-30px) perspective(600px) rotateY(-15deg);		
-	}
-	.logo {
-		position: absolute;
-		top: -30px;
-		width: 60px;
-		z-index: 2;
-		transform: translateZ(100px);
-		transition: 0.3s;
+}
 
-		&:hover {
-			transform: rotate(-0.4turn)
-		}
-	}
-	h1 {
-		font-weight: 700;
-		font-size: 22pt;
-		margin: 15px 0;
-	}
-	p {
-		color: #777;
-		// margin: 10px 0;
-		line-height: 140%;
-	}
-	p.github {
-		font-size: 0.8em;
-		
-		a {
-			opacity: 0.2;
-			transition: 0.3s;
-			&:hover {
-				opacity: 1;
-				color: red;
+.results-container{
+	background-color: white;
+	border-radius: 2em;
+	max-width: 50%;
+	border: 1em solid red;
+
+	#results{
+		max-width: 100%;
+		background-color: purple;
+		border: 1em solid orange;
+
+		li{
+			background-color: orange;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+			justify-content: center;
+
+			a{
+				
+				background-color: yellow;
+
+				text-align: center;
+				line-height: 1.2em;
+				font-size: 3em;
+				text-decoration: none;
+				color: black;
+				text-transform: uppercase;
+				letter-spacing: .1em;
+
+			}
+			img{
+				border: 1em solid black;
+				padding: 1em;
+				width: 100%;
+				height: auto;
+			}
+			p{
+				text-align: center;
+				font-size: 1.2em;
+				letter-spacing: .09em;
+				line-height: 1.1em;
+				padding: .5em 0;
+				background-color: aqua;
 			}
 		}
-	}
-	code {
-		position: absolute;
-		top: 20px;
-		right: 20px;
-		font-size: 0.8em;
-		opacity: 0.2;
 	}
 }
