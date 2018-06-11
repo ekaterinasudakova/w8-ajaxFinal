@@ -16,6 +16,14 @@ TABLE OF CONTENTS:
 /* 0. Reset ================================= */
 @import 'reset';
 
+$blurb-background-color: rgba(195, 162, 155, .35);
+$background-color: #eedd97;
+
+$primary-font: 'Catamaran', sans-serif;;
+$secondary-font: 'Source Sans Pro', sans-serif;
+$tritary-font: 'Palanquin', sans-serif;
+$quad-font:'Josefin Sans', sans-serif;
+
 
 /* 1. Main Layout ================================= */
 
@@ -23,8 +31,18 @@ TABLE OF CONTENTS:
 	box-sizing: border-box;
 }
 
+html{
+	font-size: 62.5%;
+}
+
 body{
-	background: rgb(180, 216, 112);
+	font-family: "Raleway", "HelveticaNeue","Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.5em;
+	line-height: 1.6;
+	font-weight: 400;
+	color: black;
+	
+	background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -38,18 +56,63 @@ body{
 
 /* 2. Content ================================= */
 h1{
-	font-size: 5em;
-	letter-spacing: .15em;
-	text-transform: lowercase;
-	margin-top: 1em;
-	margin-bottom: .5em;
+	font-family: $primary-font;
+	line-height: 1.2;
+	// letter-spacing: -.1rem;
+	font-size: 4.7rem;
+	// height: 177px;
+
+	// font-size: 5em;
+	// letter-spacing: .15em;
+	// text-transform: lowercase;
+	margin-top: .5em;
+	// margin-bottom: .5em;
 }
 h2{
-	font-size: 1.4em;
-	margin-bottom: 1em;
+	font-family: $secondary-font;
+	font-weight: 300;
+	font-style: oblique;
+	font-size: 2.4rem;
+	line-height: 1.5;
+	letter-spacing: -.05rem;
+	max-width: 80%;
+	margin-left: 10%;
+
+	// margin-bottom: 1em;
 }
+h3{
+	font-family: $quad-font;
+	font-size: 2.3rem;
+}
+h4{
+	font-family: $tritary-font;
+	font-size: 1.6rem;
+	line-height: 2.6;
+	letter-spacing: .03em;
+	text-align: center;
+	margin-bottom: 1em;
+
+}
+.header{
+	background-color: $blurb-background-color;
+	border: .5em solid rgba(217, 178, 121, .5); 
+	border-radius: 2em;
+	margin: 2em 0;
+	padding: 1em 0;
+	text-align: center;
+}
+h1, h2, h3{
+	margin-bottom: 2rem;
+	font-weight: 300;
+}
+
 .form{
-	background-color: rgb(115, 185, 405);
+	font-family: $tritary-font;
+	font-size: 1.25em;
+	line-height: 1.6;
+	background-color: $blurb-background-color;
+	border: .5em solid rgba(217, 178, 121, .5); 
+	
 	border-radius: 2em;
 	display: flex;
 	flex-direction: column;
@@ -57,43 +120,108 @@ h2{
 	align-content: center;
 	padding: 2em 4em;
 
+	.bt, .bl, .pl{
+		text-align: center;
+		background-color: rgba(255, 255, 255, .15);
+		border-radius: 2em;
+		width: 100%;
+		padding: .5em;
+		letter-spacing: .25rem;
+	}
+	.pl-container{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-top: 1.3em;
+		padding-bottom: .6em;
+		margin-top: 2em;
+		background-color: rgba(255, 255, 255, .5);
+		border-radius: 1em;
+
+		.p1,.p2,.p3,.p4{
+			display: flex;
+			justify-content: space-around;
+		}
+
+	}
+	.label{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		input{
+			width: 100%;
+			text-align: center;
+			font-size: 1em;
+			background-color: rgba(255, 255, 255, .5);
+			border-radius: 1em;
+			border: 0em solid transparent;
+
+			&:hover{
+				border: .3em solid rgba(217, 148, 161, .15);
+			}
+		}
+	}
+
 	input{
 		margin: 2em 0;
 		padding: 1em 11em;
 	}
+	
 	button{
+		cursor: pointer;
 		font-size: 1em;
 		text-transform: uppercase;
 		letter-spacing: .5em;
-		margin-top: 3em;
-		padding: 1em 12em;
-		background-color: antiquewhite;
+		margin-top: 2em;
+		padding: 1em 2em;
+		width: 100%;
+		background-color: #f2d8e5;
+		border-radius: 1em;
+		border: 0pc solid transparent;
+
+		&:hover{
+			background-color: #efcadb;
+			color: white;
+		}
 	}
 }
 
 .results-container{
-	background-color: white;
+	background-color: #DCD9D4; 
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%); 
+	background-blend-mode: soft-light,screen;;
 	border-radius: 2em;
-	max-width: 50%;
-	border: 1em solid red;
+	max-width: 100%;
+	margin-bottom: 2em;
+	
 
 	#results{
 		max-width: 100%;
-		background-color: purple;
-		border: 1em solid orange;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto;
+		grid-gap: 1em;
+		width: 33%;
+		// background-color: purple;
+		// border: 1em solid orange;
 
 		li{
-			background-color: orange;
+			// background-color: orange;
 			width: 100%;
 			display: flex;
 			flex-direction: column;
 			align-content: center;
 			justify-content: center;
+			border: 1px solid black;
+			padding: .5em;
 
 			a{
 				
-				background-color: yellow;
-
+				// background-color: yellow;
+				cursor: pointer;
+				font-family: $quad-font;
 				text-align: center;
 				line-height: 1.2em;
 				font-size: 3em;
@@ -101,21 +229,43 @@ h2{
 				color: black;
 				text-transform: uppercase;
 				letter-spacing: .1em;
+				padding-top: 1em;
 
 			}
 			img{
-				border: 1em solid black;
+				// border: 1em solid black;
 				padding: 1em;
 				width: 100%;
 				height: auto;
 			}
 			p{
+				font-family: $tritary-font;
 				text-align: center;
 				font-size: 1.2em;
 				letter-spacing: .09em;
 				line-height: 1.1em;
 				padding: .5em 0;
-				background-color: aqua;
+				// background-color: aqua;
+			}
+			button{
+				cursor: pointer;
+				font-size: 1em;
+				text-transform: uppercase;
+				letter-spacing: .5em;
+				margin-top: 2em;
+				padding: 1em 2em;
+				width: 80%;
+				align-self: center;
+				background-color: rgba(242, 216, 229, 1);
+				border-radius: 1em;
+				border: .05em solid black;
+				margin-bottom: 2em;
+
+				&:hover{
+					background-color: #efcadb;
+					color: white;	
+					border: .05em solid #fff;
+				}
 			}
 		}
 	}

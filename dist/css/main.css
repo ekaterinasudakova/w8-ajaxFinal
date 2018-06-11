@@ -72,8 +72,17 @@ table {
 	box-sizing: border-box;
 }
 
+html {
+	font-size: 62.5%;
+}
+
 body {
-	background: #b4d870;
+	font-family: "Raleway", "HelveticaNeue","Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.5em;
+	line-height: 1.6;
+	font-weight: 400;
+	color: black;
+	background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -84,20 +93,57 @@ body {
 
 /* 2. Content ================================= */
 h1 {
-	font-size: 5em;
-	letter-spacing: .15em;
-	text-transform: lowercase;
-	margin-top: 1em;
-	margin-bottom: .5em;
+	font-family: "Catamaran", sans-serif;
+	line-height: 1.2;
+	font-size: 4.7rem;
+	margin-top: .5em;
 }
 
 h2 {
-	font-size: 1.4em;
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: 300;
+	font-style: oblique;
+	font-size: 2.4rem;
+	line-height: 1.5;
+	letter-spacing: -.05rem;
+	max-width: 80%;
+	margin-left: 10%;
+}
+
+h3 {
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 2.3rem;
+}
+
+h4 {
+	font-family: "Palanquin", sans-serif;
+	font-size: 1.6rem;
+	line-height: 2.6;
+	letter-spacing: .03em;
+	text-align: center;
 	margin-bottom: 1em;
 }
 
+.header {
+	background-color: rgba(195, 162, 155, 0.35);
+	border: 0.5em solid rgba(217, 178, 121, 0.5);
+	border-radius: 2em;
+	margin: 2em 0;
+	padding: 1em 0;
+	text-align: center;
+}
+
+h1, h2, h3 {
+	margin-bottom: 2rem;
+	font-weight: 300;
+}
+
 .form {
-	background-color: #73b9ff;
+	font-family: "Palanquin", sans-serif;
+	font-size: 1.25em;
+	line-height: 1.6;
+	background-color: rgba(195, 162, 155, 0.35);
+	border: 0.5em solid rgba(217, 178, 121, 0.5);
 	border-radius: 2em;
 	display: flex;
 	flex-direction: column;
@@ -106,44 +152,105 @@ h2 {
 	padding: 2em 4em;
 }
 
+.form .bt, .form .bl, .form .pl {
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.15);
+	border-radius: 2em;
+	width: 100%;
+	padding: .5em;
+	letter-spacing: .25rem;
+}
+
+.form .pl-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-top: 1.3em;
+	padding-bottom: .6em;
+	margin-top: 2em;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 1em;
+}
+
+.form .pl-container .p1, .form .pl-container .p2, .form .pl-container .p3, .form .pl-container .p4 {
+	display: flex;
+	justify-content: space-around;
+}
+
+.form .label {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.form .label input {
+	width: 100%;
+	text-align: center;
+	font-size: 1em;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 1em;
+	border: 0em solid transparent;
+}
+
+.form .label input:hover {
+	border: 0.3em solid rgba(217, 148, 161, 0.15);
+}
+
 .form input {
 	margin: 2em 0;
 	padding: 1em 11em;
 }
 
 .form button {
+	cursor: pointer;
 	font-size: 1em;
 	text-transform: uppercase;
 	letter-spacing: .5em;
-	margin-top: 3em;
-	padding: 1em 12em;
-	background-color: antiquewhite;
+	margin-top: 2em;
+	padding: 1em 2em;
+	width: 100%;
+	background-color: #f2d8e5;
+	border-radius: 1em;
+	border: 0pc solid transparent;
+}
+
+.form button:hover {
+	background-color: #efcadb;
+	color: white;
 }
 
 .results-container {
-	background-color: white;
+	background-color: #DCD9D4;
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.5) 50%);
+	background-blend-mode: soft-light,screen;
 	border-radius: 2em;
-	max-width: 50%;
-	border: 1em solid red;
+	max-width: 100%;
+	margin-bottom: 2em;
 }
 
 .results-container #results {
 	max-width: 100%;
-	background-color: purple;
-	border: 1em solid orange;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-gap: 1em;
+	width: 33%;
 }
 
 .results-container #results li {
-	background-color: orange;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-content: center;
 	justify-content: center;
+	border: 1px solid black;
+	padding: .5em;
 }
 
 .results-container #results li a {
-	background-color: yellow;
+	cursor: pointer;
+	font-family: "Josefin Sans", sans-serif;
 	text-align: center;
 	line-height: 1.2em;
 	font-size: 3em;
@@ -151,22 +258,43 @@ h2 {
 	color: black;
 	text-transform: uppercase;
 	letter-spacing: .1em;
+	padding-top: 1em;
 }
 
 .results-container #results li img {
-	border: 1em solid black;
 	padding: 1em;
 	width: 100%;
 	height: auto;
 }
 
 .results-container #results li p {
+	font-family: "Palanquin", sans-serif;
 	text-align: center;
 	font-size: 1.2em;
 	letter-spacing: .09em;
 	line-height: 1.1em;
 	padding: .5em 0;
-	background-color: aqua;
+}
+
+.results-container #results li button {
+	cursor: pointer;
+	font-size: 1em;
+	text-transform: uppercase;
+	letter-spacing: .5em;
+	margin-top: 2em;
+	padding: 1em 2em;
+	width: 80%;
+	align-self: center;
+	background-color: #f2d8e5;
+	border-radius: 1em;
+	border: .05em solid black;
+	margin-bottom: 2em;
+}
+
+.results-container #results li button:hover {
+	background-color: #efcadb;
+	color: white;
+	border: .05em solid #fff;
 }
 
 /*# sourceMappingURL=main.css.map */

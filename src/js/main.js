@@ -114,7 +114,7 @@ var TwitterApi = (function(options) {
 	//our entry point to make everything work
 	var init = function() {
         console.log('init()');
-        setupListeners();
+        // setupListeners();
 	};
 
 	//assigning the init function to the shared object makes it public

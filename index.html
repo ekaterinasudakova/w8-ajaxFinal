@@ -7,8 +7,9 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="stylesheet" href="dist/css/main.css">
+		<link href="https://fonts.googleapis.com/css?family=Catamaran:900|Josefin+Sans:100i|Palanquin|Source+Sans+Pro:300" rel="stylesheet">
 
+		<link rel="stylesheet" href="dist/css/main.css">
 		<style type="text/css">
 			.highlight { color: blue;}
 		</style>
@@ -16,38 +17,54 @@
 	</head>
 	<body>
 		<div class="header">
-			<h1>Ehhhh - Sketch</h1>
-			<h2>Validate your choice, see what everyone is saying about where you choose to do business</h2>
+			<h1>Have You Heard?</h1>
+			<h2>Validate your choice: see what everyone is saying about where you choose to do business</h2>
 		</div>
 		<div class="form">
 				<form>
-						<label class="label ">Business Type:
+					<div class="info-blurb">
+						<h3>Here's how you get started:</h3>
+						<h4>Browse through the massive Yelp Business database to find an establishment near you. When you've made your choice, find out what people have been tweeting about them recently to see if their reputation still stands.</h>		
+					</div>
+						
+				</br>
+					
+						<label class="label bt-container">
+							<p class="bt">Business Type:</p>
 							<input type="text" name="term" id="term" placeholder="type" value="cats" />
 						</label>
-						<label class="label">Business Location:
+						
+						<label class="label bl-container">
+							<p class="bl">Business Location:</p>
 							<input type="text" name="location" id="location" placeholder="location" value="Atlanta, GA" />
 						</label>
 					
-						<br/>
-					
-						<label class="label">Price Level:
-							<label>
-								<input type="checkbox" name="price" value="1" />
-							</label> $
-							<label>
-								<input type="checkbox" name="price" value="2"; />
-							</label> $$
-							<label>
-								<input type="checkbox" name="price" value="3"; />
-							</label> $$$
-							<label>
-								<input type="checkbox" name="price" value="4"; />
-							</label> $$$$
+						<label>
+							<p class="pl">Price Level:</p>
+							<div class="pl-container">
+								<label class="p1">
+									<p>$</p>
+									<input type="checkbox" name="price" value="1" />
+								</label>
+								<label class="p2">
+									<p>$$</p>
+									<input type="checkbox" name="price" value="2"; />	
+								</label>
+								<label class="p3">
+									<p>$$$</p>
+									<input type="checkbox" name="price" value="3"; />
+								</label>
+								<label class="p4">
+									<p>$$$$</p>
+									<input type="checkbox" name="price" value="4"; />
+								</label>
+							</div>
+							
 						</label>
 					
 						<br/>
 						<button id="search">Search</button>
-						</form>
+					</form>
 		</div>
 		
 		
